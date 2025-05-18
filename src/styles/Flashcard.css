@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ea6ec5, #f14949);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+}
+
+.card-box {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.flashcard {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  width: 100%;
+  max-width: 420px;
+  height: 250px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  position: relative;
+  cursor: pointer;
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 452px;
+  height: 282px;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 1.25rem;
+}
+.front{
+  background-color: #99e4e2;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: #99d1ea;
+  justify-self: unset;
+}
+
+
+.click-text {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #ff5e5e;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.controls button {
+  padding: 0.6rem 1rem;
+  background: #9147ff;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.controls button[disabled] {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.reset-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.progress-bar > div {
+  height: 100%;
+  background: #8000ff;
+  transition: width 0.5s ease;
+}

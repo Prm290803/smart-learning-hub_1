@@ -1,0 +1,92 @@
+/* Background and Card */
+.pomodoro-bg {
+  min-height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #000000;
+}
+
+.pomodoro-card {
+  background: #d2d2d2;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgb(0, 0, 0);
+  text-align: center;
+  width: 400px;
+}
+
+.pomodoro-title {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.pomodoro-sub {
+  font-size: 0.9rem;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+
+.circle-timer {
+   position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 20px auto;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring__circle {
+  stroke-linecap: round;
+}
+
+.timer-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Controls and Inputs */
+.control-buttons button,
+.preset-buttons button,
+.custom-input button {
+  margin: 6px;
+  padding: 10px 16px;
+  background: #ffc800;
+  border: none;
+  border-radius: 8px;
+  color: rgb(1, 0, 0);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.control-buttons button:hover,
+.preset-buttons button:hover,
+.custom-input button:hover {
+  background: #83ce01;
+}
+
+.custom-input input {
+  padding: 8px;
+  width: 60px;
+  border-radius: 6px;
+  border: 1px solid #000000;
+  margin-right: 10px;
+}
+
+/* Session Display */
+.session-count {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #a0ffae;   
+}
